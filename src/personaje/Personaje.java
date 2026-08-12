@@ -33,5 +33,6 @@ public class Personaje {
     public void modificarPlata(int dinero){
         this.dinero += dinero;
 
+
     }
 }

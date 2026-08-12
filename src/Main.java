@@ -34,6 +34,7 @@ public class Main{
             System.out.println("7) salir");
             op = Utiles.verificarEntero(1 ,  7);
         }while(op != 7);
+
     }
 }
 

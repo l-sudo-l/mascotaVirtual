@@ -48,6 +48,7 @@ public class Utiles {
 
     public static int generarAleatorio(int n1 , int n2){
 
-        return random.nextInt((n2-n1) + 1)+n1;
+        return random.nextInt((n2-n1) + 1)+n1
+                ;
     }
 }

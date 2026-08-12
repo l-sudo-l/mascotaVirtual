@@ -55,5 +55,6 @@ public class Mascota {
 
     public void modificarSuciedad(int suciedad){
         this.suciedad += suciedad;
+
     }
 }

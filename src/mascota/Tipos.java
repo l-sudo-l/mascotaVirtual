@@ -4,4 +4,5 @@ public enum Tipos {
     FUEGO,
     TIERRA,
     AGUA
+
 }
