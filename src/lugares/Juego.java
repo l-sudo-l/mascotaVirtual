@@ -100,6 +100,7 @@ public class Juego extends Lugar{
              personaje.getMascota().modificarSuciedad((int) (personaje.getMascota().getSuciedad() * 0.02));
          }
 
+         
      }
 
 
