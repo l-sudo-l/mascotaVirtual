@@ -48,5 +48,6 @@ public enum Mascotas {
 
     public Tipos getTipo() {
         return tipo;
+
     }
 }
