@@ -1,5 +1,7 @@
 package personaje;
 
+import utiles.Utiles;
+
 import java.util.ArrayList;
 
 public class Inventario{
@@ -70,6 +72,11 @@ public class Inventario{
             }
 
         }
+
+        System.out.println("ingrese el numero del objeto que desea consumir");
+        int op = Utiles.verificarEntero(1 , items.size());
+        consumirObjeto(op);
+
     }
 
 

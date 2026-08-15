@@ -19,6 +19,7 @@ public class Main{
         Mascota mascota = Mascotas.values()[op-1].getMascota();
 
         Personaje personaje = new Personaje(nombre , mascota, new Inventario(20));
+        cargarMenu(personaje);
     }
 
     private static void cargarMenu(Personaje personaje){
@@ -43,6 +44,8 @@ public class Main{
                 case 2:
                     personaje.inventario().mostrarComida();
                 break;
+
+
 
             }
         }while(op != 7);
