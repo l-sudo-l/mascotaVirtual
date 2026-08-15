@@ -1,5 +1,6 @@
 import personaje.Personaje;
 import utiles.Utiles;
+import lugares.Juego;
 import mascota.*;
 public class Main{
 
@@ -17,11 +18,9 @@ public class Main{
         Mascota mascota = Mascotas.values()[op-1].getMascota();
 
         Personaje personaje = new Personaje(nombre , mascota);
-
-        cargarMenu();
     }
 
-    private static void cargarMenu(){
+    private static void cargarMenu(Personaje personaje){
         int op = 0;
         do{
             System.out.println("ingrese la opcion deseada");
@@ -33,6 +32,14 @@ public class Main{
             System.out.println("6) ver estadisticas");
             System.out.println("7) salir");
             op = Utiles.verificarEntero(1 ,  7);
+
+            switch (op){
+                case 1:
+                   Juego zonaJuegos = new Juego();
+                   zonaJuegos.iniciar(personaje);
+                break;
+
+            }
         }while(op != 7);
 
     }
