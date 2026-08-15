@@ -1,3 +1,4 @@
+import personaje.Inventario;
 import personaje.Personaje;
 import utiles.Utiles;
 import lugares.Juego;
@@ -17,7 +18,7 @@ public class Main{
         int op = Utiles.verificarEntero(1, 3);
         Mascota mascota = Mascotas.values()[op-1].getMascota();
 
-        Personaje personaje = new Personaje(nombre , mascota);
+        Personaje personaje = new Personaje(nombre , mascota, new Inventario(20));
     }
 
     private static void cargarMenu(Personaje personaje){
@@ -37,6 +38,10 @@ public class Main{
                 case 1:
                    Juego zonaJuegos = new Juego();
                    zonaJuegos.iniciar(personaje);
+                break;
+
+                case 2:
+                    personaje.inventario().mostrarComida();
                 break;
 
             }

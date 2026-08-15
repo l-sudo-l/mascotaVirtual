@@ -2,6 +2,8 @@ package lugares;
 
 import personaje.Personaje;
 import utiles.Utiles;
+
+
 public class Juego extends Lugar{
 
     public Juego() {
