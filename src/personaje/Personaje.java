@@ -36,4 +36,14 @@ public class Personaje {
         this.dinero += dinero;
 
     }
+
+    public void mostrarEstadistica(){
+        System.out.println("nombre: " + nombre);
+        System.out.println("dinero: " + dinero);
+        System.out.println("tipo de mascota: " + getMascota().getTipo());
+        System.out.println("energia de la mascota: " + getMascota().getEnergia());
+        System.out.println("hambre de la mascota: " + getMascota().getHambre());
+        System.out.println("felicidad de la mascota: " + getMascota().getFelicidad());
+        System.out.println("suciedad de la mascota: " + getMascota().getSuciedad());
+    }
 }

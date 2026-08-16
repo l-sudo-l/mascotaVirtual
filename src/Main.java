@@ -62,12 +62,8 @@ public class Main{
                 break;
 
                 case 6:
-
+                    personaje.mostrarEstadistica();
                 break;
-
-
-
-
             }
         }while(op != 7);
 
