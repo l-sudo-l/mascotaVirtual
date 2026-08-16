@@ -1,3 +1,5 @@
+import lugares.Baño;
+import lugares.Tienda;
 import personaje.Inventario;
 import personaje.Personaje;
 import utiles.Utiles;
@@ -44,6 +46,25 @@ public class Main{
                 case 2:
                     personaje.inventario().mostrarComida();
                 break;
+
+                case 3:
+                    Baño baño = new Baño();
+                    baño.iniciar(personaje);
+                break;
+
+                case 4:
+                    personaje.inventario().mostrarInventario();
+                break;
+
+                case 5:
+                    Tienda tienda = new Tienda();
+                    tienda.iniciar(personaje);
+                break;
+
+                case 6:
+
+                break;
+
 
 
 
