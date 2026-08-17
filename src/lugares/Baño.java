@@ -16,14 +16,15 @@ public class Baño extends Lugar{
     }
 
     public static void bañarse(Personaje personaje){
+        int suciedad = personaje.getMascota().getSuciedad();
         if(personaje.getMascota().getTipo()== Tipos.FUEGO){
-            personaje.getMascota().modificarSuciedad(-50);
+            personaje.getMascota().modificarSuciedad(-(suciedad * 50 / 100));
         }
         else if (personaje.getMascota().getTipo() == Tipos.AGUA){
-            personaje.getMascota().modificarSuciedad(-100);
+            personaje.getMascota().modificarSuciedad(-suciedad);
         }
         else if (personaje.getMascota().getTipo() == Tipos.TIERRA) {
-            personaje.getMascota().modificarSuciedad(-25);
+            personaje.getMascota().modificarSuciedad(-(suciedad * 25 / 100));
         }
         else{
             System.out.println("ERROR");

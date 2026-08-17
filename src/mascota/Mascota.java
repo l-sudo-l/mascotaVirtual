@@ -10,10 +10,10 @@ public class Mascota {
 
     public Mascota(String nombre, int energia, int felicidad, int hambre, int suciedad, Tipos tipo) {
         this.nombre = nombre;
-        this.energia = energia;
-        this.felicidad = felicidad;
-        this.hambre = hambre;
-        this.suciedad = suciedad;
+        this.energia = limitar(energia);
+        this.felicidad = limitar(felicidad);
+        this.hambre = limitar(hambre);
+        this.suciedad = limitar(suciedad);
         this.tipo = tipo;
     }
 
@@ -41,20 +41,23 @@ public class Mascota {
         return tipo;
     }
 
-    public void modificarEnergia(int energia){
-            this.energia += energia;
+    public void modificarEnergia(int energia) {
+        this.energia = limitar(this.energia + energia);
     }
 
-    public void modificarFelicidad(int felicidad){
-        this.felicidad += felicidad;
+    public void modificarFelicidad(int felicidad) {
+        this.felicidad = limitar(this.felicidad + felicidad);
     }
 
-    public void modificarHambre(int hambre){
-        this.hambre += hambre;
+    public void modificarHambre(int hambre) {
+        this.hambre = limitar(this.hambre + hambre);
     }
 
-    public void modificarSuciedad(int suciedad){
-        this.suciedad += suciedad;
+    public void modificarSuciedad(int suciedad) {
+        this.suciedad = limitar(this.suciedad + suciedad);
+    }
 
+    private int limitar(int valor) {
+        return Math.max(0, Math.min(100, valor));
     }
 }

@@ -1,7 +1,6 @@
 package personaje;
 import mascota.Mascota;
 
-import java.util.ArrayList;
 
 public class Personaje {
     private String nombre;
@@ -40,6 +39,7 @@ public class Personaje {
     public void mostrarEstadistica(){
         System.out.println("nombre: " + nombre);
         System.out.println("dinero: " + dinero);
+        System.out.println("nombre de la mascota: " + getMascota().getNombre());
         System.out.println("tipo de mascota: " + getMascota().getTipo());
         System.out.println("energia de la mascota: " + getMascota().getEnergia());
         System.out.println("hambre de la mascota: " + getMascota().getHambre());

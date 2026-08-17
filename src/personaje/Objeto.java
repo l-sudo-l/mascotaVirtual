@@ -1,6 +1,8 @@
 package personaje;
 
-public class Objeto {
+import mascota.Mascota;
+
+public class Objeto implements Usable {
         private String nombre;
         private String tipo;
         private int precioCompra;
@@ -54,5 +56,12 @@ public class Objeto {
         return suciedad;
     }
 
+    @Override
+    public void aplicarEfecto(Mascota mascota) {
+        mascota.modificarEnergia(energia);
+        mascota.modificarFelicidad(felicidad);
+        mascota.modificarHambre(hambre);
+        mascota.modificarSuciedad(suciedad);
+    }
 
 }
